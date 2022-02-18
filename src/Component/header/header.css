@@ -1,0 +1,30 @@
+.header-container{
+    
+}
+
+.icon{
+    font-size: 30px;
+    cursor: pointer;
+    display:flex;
+    align-items: center;
+    color:white;
+}
+
+.header-menu{
+    display:flex;
+    padding:10px;
+}
+
+.header-menu-left{
+flex:1;
+}
+
+.header-menu-right{
+    flex:1;
+    display:flex;
+    justify-content: end;
+}
+
+.header-menu-mymenu{
+    margin-left: 20px;
+}
