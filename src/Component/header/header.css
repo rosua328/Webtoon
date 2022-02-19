@@ -1,30 +1,55 @@
-.header-container{
-    
+.header-container {
 }
 
-.icon{
-    font-size: 30px;
-    cursor: pointer;
-    display:flex;
-    align-items: center;
-    color:white;
+.icon {
+  font-size: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: white;
 }
 
-.header-menu{
-    display:flex;
-    padding:10px;
+.header-menu {
+  display: flex;
+  padding: 10px;
 }
 
-.header-menu-left{
-flex:1;
+.header-menu-left {
+  flex: 1;
 }
 
-.header-menu-right{
-    flex:1;
-    display:flex;
-    justify-content: end;
+.header-menu-right {
+  flex: 1;
+  display: flex;
+  justify-content: end;
 }
 
-.header-menu-mymenu{
-    margin-left: 20px;
+.header-menu-mymenu {
+  margin-left: 20px;
+}
+
+.header-nav {
+  padding: 0 50px;
+  text-align: center;
+}
+
+.a {
+  color: rgb(73, 73, 73);
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  /* background-color: dimgrey; */
+}
+.b {
+  color: rgb(255, 255, 255);
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  /* background-color: dimgrey; */
+}
+
+.swiper-slide-active {
+  /* color: red; */
 }

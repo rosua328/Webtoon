@@ -1,0 +1,30 @@
+.daily-container {
+  padding: 10px 0;
+}
+
+.daily-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.obj input[type="radio"] {
+  display: none;
+}
+
+.obj input[type="radio"] + span {
+  font-size: 15px;
+  display: inline-block;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+}
+
+.obj input[type="radio"]:checked + span {
+  background-color: #ffffff;
+  color: #000000;
+}
