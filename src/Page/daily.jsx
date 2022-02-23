@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./daily.css";
+import comicList from "./../Data/comic";
 
 const Daily = () => {
   const [itday, setday] = useState("mon");
@@ -28,7 +29,13 @@ const Daily = () => {
             </label>
           ))}
         </div>
-        <div className="daily-items">{itday}</div>
+        <div className="daily-items">
+          {comicList.map((item) => (
+            <div className="comic-item" key={item.id}>
+              {item.title}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

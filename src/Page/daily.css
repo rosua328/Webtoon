@@ -1,5 +1,5 @@
 .daily-container {
-  padding: 10px 0;
+  padding: 10px 300px;
   background-color: rgb(80, 64, 44);
 }
 
@@ -29,4 +29,16 @@
 .obj input[type="radio"]:checked + span {
   background-color: #ffffff;
   color: #000000;
+}
+
+.daily-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.comic-item {
+  width: 150px;
+  background-color: #ffffff;
+  margin: 3px;
 }
