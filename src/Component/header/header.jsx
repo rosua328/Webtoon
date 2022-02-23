@@ -3,8 +3,15 @@ import { AiOutlineAlert, AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Daily from "../../Page/daily";
+import { useState } from "react";
 
 const Header = () => {
+  const [cate, setCate] = useState(["요일별", "랭킹", "업로드순", "선물함"]);
+
+  const field = (value) => {
+    console.log(value);
+  };
+
   return (
     <div>
       <div className="header-container">
@@ -28,11 +35,23 @@ const Header = () => {
             // spaceBetween={50}
             slidesPerView={3}
             loop={true}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={(e) => console.log()}
             centeredSlides={true}
           >
-            <SwiperSlide>
+            {cate.map((value, i) => (
+              <SwiperSlide key={i}>
+                {({ isActive }) =>
+                  isActive ? (
+                    <>
+                      <div className="b">{value}</div>
+                      {field(value)}
+                    </>
+                  ) : (
+                    <div className="a">{value}</div>
+                  )
+                }
+              </SwiperSlide>
+            ))}
+            {/* <SwiperSlide>
               {({ isActive }) =>
                 isActive ? (
                   <>
@@ -70,7 +89,7 @@ const Header = () => {
                   <div className="a">선물함</div>
                 )
               }
-            </SwiperSlide>
+            </SwiperSlide> */}
           </Swiper>
         </div>
       </div>

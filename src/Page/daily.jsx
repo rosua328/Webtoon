@@ -1,40 +1,34 @@
+import { useEffect, useState } from "react";
 import "./daily.css";
 
 const Daily = () => {
+  const [itday, setday] = useState("mon");
+  const [selectList, setList] = useState([
+    "월",
+    "화",
+    "수",
+    "목",
+    "금",
+    "토",
+    "일",
+  ]);
+
+  const handleChange = (e) => {
+    setday(e.target.value);
+  };
+
   return (
     <div>
       <div className="daily-container">
-        <div className="daily-nav">
-          <label className="obj">
-            <input type="radio" name="daily" value="monday" />
-            <span>월</span>
-          </label>
-          <label className="obj">
-            <input type="radio" name="daily" value="monday" />
-            <span>화</span>
-          </label>
-          <label className="obj">
-            <input type="radio" name="daily" value="monday" />
-            <span>수</span>
-          </label>
-          <label className="obj">
-            <input type="radio" name="daily" value="monday" />
-            <span>목</span>
-          </label>
-          <label className="obj">
-            <input type="radio" name="daily" value="monday" />
-            <span>금</span>
-          </label>
-          <label className="obj">
-            <input type="radio" name="daily" value="monday" />
-            <span>토</span>
-          </label>
-          <label className="obj">
-            <input type="radio" name="daily" value="monday" />
-            <span>일</span>
-          </label>
+        <div className="day-nav">
+          {selectList.map((value, i) => (
+            <label className="obj" key={i} onChange={handleChange}>
+              <input type="radio" value={value} id={value} name="aa" />
+              <span>{value}</span>
+            </label>
+          ))}
         </div>
-        <div className="daily-items"></div>
+        <div className="daily-items">{itday}</div>
       </div>
     </div>
   );
