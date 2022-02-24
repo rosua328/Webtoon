@@ -29,8 +29,8 @@
 }
 
 .header-nav {
-  padding: 0 50px;
   text-align: center;
+  width: 100%;
 }
 
 .a {
@@ -42,7 +42,6 @@
   /* background-color: dimgrey; */
 }
 .b {
-  background-color: aquamarine;
   color: rgb(255, 255, 255);
   padding: 10px 30px;
   font-size: 18px;
@@ -53,4 +52,11 @@
 
 .swiper-slide-active {
   /* color: red; */
+}
+
+@media only screen and (max-width: 600px) {
+  .a,
+  .b {
+    font-size: 15px;
+  }
 }

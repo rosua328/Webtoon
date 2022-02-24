@@ -32,7 +32,7 @@ const Daily = () => {
         <div className="daily-items">
           {comicList.map((item) => (
             <div className="comic-item" key={item.id}>
-              {item.title}
+              <img className="comic-img" src={`img/${item.img}`} alt="" />
             </div>
           ))}
         </div>
