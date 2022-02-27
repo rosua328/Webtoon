@@ -2,7 +2,7 @@ import "./header.css";
 import { AiOutlineAlert, AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import Daily from "../../Page/daily";
+import Daily from "../daily/daily";
 import { useState } from "react";
 
 const Header = () => {

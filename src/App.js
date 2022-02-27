@@ -1,5 +1,4 @@
 import './App.css';
-import Daily from './Page/daily';
 import Home from './Page/home';
 
 function App() {
