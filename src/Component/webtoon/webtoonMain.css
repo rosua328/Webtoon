@@ -1,0 +1,45 @@
+.web-container {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.web-header {
+  color: white;
+  background-color: rgb(32, 32, 32);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.web-header-left {
+  flex: 1;
+
+  padding-left: 15px;
+}
+.web-header-center {
+  flex: 1;
+  text-align: center;
+}
+.web-header-right {
+  flex: 1;
+}
+
+.web-wrap {
+  width: 600px;
+}
+
+.web-img {
+  width: 100%;
+}
+
+.web-menu {
+  position: fixed;
+  bottom: 0;
+  background-color: aqua;
+  height: 50px;
+}
