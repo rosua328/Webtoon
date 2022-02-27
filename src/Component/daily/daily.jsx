@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./daily.css";
-import comicList from "../../Data/comic";
+import { comicList } from "../../Data/comic";
 
 const Daily = () => {
   const [itday, setday] = useState("mon");

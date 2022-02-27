@@ -1,0 +1,25 @@
+.list-item-container {
+  width: 19.7%;
+  cursor: pointer;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.list-item-img {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.list-item-dev {
+  padding-left: 8px;
+}
+
+.list-item-date {
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 600px) {
+  .list-item-container {
+    width: 33%;
+  }
+}

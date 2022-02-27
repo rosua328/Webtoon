@@ -1,24 +1,39 @@
-.list-container {
+.list-back-container {
   width: 100%;
+  background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 0%,
+      /* rgba(255, 255, 255, 0) 80%, */ rgb(32, 32, 32) 100%
+    ),
+    url(https://source.unsplash.com/random);
+  background-size: cover;
 }
 
-.list-back {
+.list-header {
   width: 100%;
-  background-color: rgba(211, 140, 53, 0.377);
-  display: flex;
-  justify-content: center;
 }
 
 .list-wrap {
   width: 600px;
 }
 
+.list-top {
+  display: flex;
+  justify-content: center;
+}
+
+hr {
+  margin-top: 0;
+}
+
 .list-img {
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .list-img-main {
-  width: 100%;
+  width: 70%;
 }
 
 .list-dev {
@@ -57,4 +72,11 @@
   color: white;
   border: none;
   font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.list-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
