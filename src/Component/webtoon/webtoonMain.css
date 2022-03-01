@@ -19,7 +19,7 @@
 .web-header-left {
   flex: 1;
 
-  padding-left: 15px;
+  padding-left: 25px;
 }
 .web-header-center {
   flex: 1;
@@ -40,6 +40,108 @@
 .web-menu {
   position: fixed;
   bottom: 0;
-  background-color: aqua;
+  left: 0;
+  right: 0;
   height: 50px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.web-back {
+  color: white;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.web-menu-wrap {
+  background-color: rgb(32, 32, 32);
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+  border-radius: 35px;
+}
+
+.web-btn {
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+.web-btn-up {
+  width: 100%;
+  height: 70px;
+  font-weight: bold;
+  font-size: 20px;
+  background-color: white;
+  border: none;
+  border-top: 2px solid rgba(192, 192, 192, 0.63);
+  cursor: pointer;
+}
+
+.web-footer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px 0;
+}
+
+.web-good {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.web-good-count {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.web-good-icon {
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 85px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.web-chat {
+  width: 550px;
+}
+
+.web-chatMain {
+  color: white;
+  padding: 15px 0;
+}
+
+.web-chat-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.web-chat-nick {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.web-hr {
+  margin: 0;
 }

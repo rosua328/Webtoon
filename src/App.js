@@ -6,7 +6,7 @@ import Webtoon from './Page/webtoon';
 function App() {
   return (
     <div>
-     <Webtoon/>
+     <Home/>
     </div>
   );
 }

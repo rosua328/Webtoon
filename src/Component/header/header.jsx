@@ -2,11 +2,12 @@ import "./header.css";
 import { AiOutlineAlert, AiOutlineMenu, AiOutlineSearch } from "react-icons/ai";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import Daily from "../daily/daily";
 import { useState } from "react";
+import Daily from "./../daily/daily";
+import Category from "./../cate/category";
 
 const Header = () => {
-  const [cate, setCate] = useState(["요일별", "랭킹", "업로드순", "선물함"]);
+  const [cate, setCate] = useState(["요일별", "랭킹", "업로드순", "장르별"]);
   const [page, setpage] = useState();
   const field = (value) => {
     console.log(value);
@@ -46,7 +47,12 @@ const Header = () => {
                   isActive ? (
                     <>
                       <div className="b">{value}</div>
-                      {/* {field(value)} */}
+                      <div className="">
+                        {value === "요일별" && <Daily />}
+                        {value === "랭킹" && <Daily />}
+                        {value === "업로드순" && <Daily />}
+                        {value === "장르별" && <Category />}
+                      </div>
                     </>
                   ) : (
                     <div className="a">{value}</div>
