@@ -80,3 +80,14 @@ hr {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+@media only screen and (max-width: 600px) {
+  .list-dev {
+    padding: 0 10px;
+  }
+
+  .list-firstBtn {
+    height: 35px;
+    font-size: 13px;
+  }
+}

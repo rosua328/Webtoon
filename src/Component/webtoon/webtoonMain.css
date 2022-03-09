@@ -145,3 +145,18 @@
 .web-hr {
   margin: 0;
 }
+
+@media only screen and (max-width: 600px) {
+  .web-chat {
+    width: 100%;
+  }
+
+  .web-btn-up {
+    height: 50px;
+    font-size: 15px;
+  }
+
+  .web-chatMain {
+    padding: 15px 10px;
+  }
+}

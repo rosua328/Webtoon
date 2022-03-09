@@ -7,14 +7,8 @@ import Daily from "./../daily/daily";
 import Category from "./../cate/category";
 
 const Header = () => {
-  const [cate, setCate] = useState(["요일별", "랭킹", "업로드순", "장르별"]);
+  const [cate] = useState(["요일별", "랭킹", "업로드순", "장르별"]);
   const [page, setpage] = useState();
-  const field = (value) => {
-    console.log(value);
-    if (value === "요a일별") {
-      setpage(<Daily />);
-    }
-  };
 
   return (
     <div>
@@ -43,25 +37,25 @@ const Header = () => {
           >
             {cate.map((value, i) => (
               <SwiperSlide key={i}>
-                {({ isActive }) =>
-                  isActive ? (
-                    <>
-                      <div className="b">{value}</div>
-                      <div className="">
-                        {value === "요일별" && <Daily />}
-                        {value === "랭킹" && <Daily />}
-                        {value === "업로드순" && <Daily />}
-                        {value === "장르별" && <Category />}
-                      </div>
-                    </>
-                  ) : (
-                    <div className="a">{value}</div>
+                {
+                  ({ isActive }) => (
+                    <div
+                      style={
+                        isActive
+                          ? { color: "rgb(255, 255, 255)" }
+                          : { color: "rgb(73, 73, 73)" }
+                      }
+                      className="b"
+                    >
+                      {value}
+                    </div>
                   )
+                  // {/* value는 요일, 랭킹, 업로드순, 장르별인게 맞으면 {value === "요일별" && <Daily />} 이런식으로 router 만드셈 */}
                 }
               </SwiperSlide>
             ))}
           </Swiper>
-          {page}
+          <Daily />
         </div>
       </div>
     </div>

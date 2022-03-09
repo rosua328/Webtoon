@@ -33,16 +33,8 @@
   width: 100%;
 }
 
-.a {
-  color: rgb(73, 73, 73);
-  padding: 10px 30px;
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  /* background-color: dimgrey; */
-}
 .b {
-  color: rgb(255, 255, 255);
+  /* color: rgb(255, 255, 255); */
   padding: 10px 30px;
   font-size: 18px;
   font-weight: bold;

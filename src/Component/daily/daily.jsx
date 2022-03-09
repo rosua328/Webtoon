@@ -14,8 +14,26 @@ const Daily = () => {
     "일",
   ]);
 
+  const dayit = [
+    "일요일",
+    "월요일",
+    "화요일",
+    "수요일",
+    "목요일",
+    "금요일",
+    "토요일",
+  ];
+
   const handleChange = (e) => {
     setday(e.target.value);
+  };
+
+  const aa = new Date().getDay();
+  const bb = dayit[aa];
+  console.log(bb);
+
+  const move = (item) => {
+    console.log(item.id);
   };
 
   return (
@@ -31,7 +49,11 @@ const Daily = () => {
         </div>
         <div className="daily-items">
           {comicList.map((item) => (
-            <div className="comic-item" key={item.id}>
+            <div
+              onClick={() => move(item)}
+              className="comic-item"
+              key={item.id}
+            >
               <img className="comic-img" src={`img/${item.img}`} alt="" />
             </div>
           ))}
