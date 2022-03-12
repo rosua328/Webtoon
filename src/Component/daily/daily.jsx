@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import "./daily.css";
 import { comicList } from "../../Data/comic";
+import { Link } from "react-router-dom";
 
 const Daily = () => {
-  const [itday, setday] = useState("mon");
+  const [itday, setday] = useState();
   const [selectList, setList] = useState([
     "월",
     "화",
@@ -25,15 +26,16 @@ const Daily = () => {
   ];
 
   const handleChange = (e) => {
-    setday(e.target.value);
+    // setday(e.target.value);
+    console.log(e);
   };
 
   const aa = new Date().getDay();
   const bb = dayit[aa];
-  console.log(bb);
+  // console.log(bb);
 
   const move = (item) => {
-    console.log(item.id);
+    // console.log(item.id);
   };
 
   return (
@@ -41,10 +43,16 @@ const Daily = () => {
       <div className="daily-container">
         <div className="day-nav">
           {selectList.map((value, i) => (
-            <label className="obj" key={i} onChange={handleChange}>
-              <input type="radio" value={value} id={value} name="aa" />
-              <span>{value}</span>
-            </label>
+            <Link to={`/${value}`}>
+              <label
+                className="obj"
+                key={i}
+                onClick={() => handleChange(value)}
+              >
+                <input type="radio" value={value} id={value} name="aa" />
+                <span>{value}</span>
+              </label>
+            </Link>
           ))}
         </div>
         <div className="daily-items">

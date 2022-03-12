@@ -9,7 +9,6 @@ import Category from "./../cate/category";
 const Header = () => {
   const [cate] = useState(["요일별", "랭킹", "업로드순", "장르별"]);
   const [page, setpage] = useState();
-
   return (
     <div>
       <div className="header-container">
@@ -34,6 +33,7 @@ const Header = () => {
             slidesPerView={3}
             loop={true}
             centeredSlides={true}
+            onActiveIndexChange={() => {}}
           >
             {cate.map((value, i) => (
               <SwiperSlide key={i}>
@@ -56,6 +56,7 @@ const Header = () => {
             ))}
           </Swiper>
           <Daily />
+          {console.log(page)}
         </div>
       </div>
     </div>
